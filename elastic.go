@@ -33,16 +33,25 @@ type EsConfig struct {
 	Above                  int
 }
 
+//es host
 func WithHost(host ...string) ConfigParam {
 	return func(p *EsConfig) {
 		p.Addresses = host
 	}
 }
+
 func WithUser(user string) ConfigParam {
 	return func(p *EsConfig) {
 		p.Username = user
 	}
 }
+
+func WithPwd(pwd string) ConfigParam {
+	return func(p *EsConfig) {
+		p.Password = pwd
+	}
+}
+
 func WithCloudId(cloudId string) ConfigParam {
 	return func(p *EsConfig) {
 		p.CloudID = cloudId
@@ -80,9 +89,12 @@ func WithIgnoreAbove(above int) ConfigParam {
 }
 
 type MappingTool interface {
-	Create(string, interface{}) (string, error)
-	Put(string, interface{}) (string, error)
-	GetMapping(string) (string, error)
+	//if the index not exists u should create mapping
+	Create(index string, param interface{}) (string, error)
+	//its mean put _mapping
+	Put(index string, param interface{}) (string, error)
+	//query _mapping
+	GetMapping(index string) (string, error)
 }
 
 func NewConver(version ES_VERSION, cfg ...ConfigParam) (MappingTool, error) {
