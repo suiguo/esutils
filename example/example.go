@@ -1,9 +1,10 @@
 package main
 
 import (
-	"esconvert"
 	"log"
 	"time"
+
+	esconvert "github.com/suiguo/esutils"
 )
 
 type TestMapping struct {

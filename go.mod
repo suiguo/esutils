@@ -1,4 +1,4 @@
-module esconvert
+module github.com/suiguo/esutils
 
 go 1.18
 

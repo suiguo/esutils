@@ -3,7 +3,7 @@ package esconvert
 import (
 	"fmt"
 
-	"esconvert/client"
+	"github.com/suiguo/esutils/client"
 
 	es7 "github.com/elastic/go-elasticsearch/v7"
 	es8 "github.com/elastic/go-elasticsearch/v8"
