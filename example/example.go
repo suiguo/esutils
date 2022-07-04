@@ -27,7 +27,7 @@ type TestMapping2 struct {
 
 func main() {
 	tool, err := esconvert.NewConver(esconvert.V8, esconvert.WithHost("http://127.0.0.1:9200"), esconvert.WithIgnoreAbove(256))
-	if err != nil {
+	if err != nil && tool != nil {
 		panic(err)
 	}
 	resp, err := tool.Create("index-test-create3", &TestMapping{})
