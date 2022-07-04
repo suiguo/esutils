@@ -15,3 +15,10 @@ its a very simple code.u can edit it by yourself,if u want to add new type. just
 
 
 将带有json tag的go 结构体转换成 elasticsearch的mapping.
+
+
+use import "github.com/suiguo/esutils" 
+
+
+[example](https://github.com/suiguo/esutils/blob/main/example/example.go)
+
