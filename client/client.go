@@ -21,6 +21,9 @@ type Mappings struct {
 type ExtraEarn map[string]interface{}
 
 func NewClient(cli interface{}, above int) *MappingClient {
+	if cli == nil {
+		return nil
+	}
 	v7, ok := cli.(*es7.Client)
 	if ok {
 		return &MappingClient{
