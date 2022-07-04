@@ -5,7 +5,7 @@ its a very simple code.u can edit it by yourself,if u want to add new type. just
 
 | go type  |  es type |
 | ------------- |:-------------:|
-| uint8,uint16,uint32,int8,int16,int32,int| long     |
+| uint8,uint16,uint32,int8,int16,int32,int| integer     |
 |uint64,int64    | long     |
 | float32      | float    |
 | float64     | double    |
