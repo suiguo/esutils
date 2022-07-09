@@ -141,6 +141,9 @@ func (m *MappingClient) genMapping(model_struct any) (out *MappData, out_err err
 		if es_type == "keyword" {
 			tmp["ignore_above"] = m.above
 		}
+		if es_type == "date" {
+			tmp["format"] = "yyyy-MM-dd HH:mm:ss"
+		}
 		data.Mappings.Properties[tag] = tmp
 	}
 	return data, nil
